@@ -1,0 +1,53 @@
+.button {
+    color: var(--white);
+    padding: 1rem 4rem;
+    background: var(--primary-color);
+    text-align: center;
+    box-shadow: 0 6px var(--primary-color-dark);
+    border-radius: 2.5rem;
+    transition: .1s ease-in-out all;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    display: inline-block;
+    font-size: var(--font-size-text);
+    line-height: var(--font-size-text);
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+    background: #48536a;
+    transform: translateY(1px);
+    box-shadow: 0 5px var(--primary-color-dark);
+}
+
+.button:active {
+    background: #434f66;
+    transform: translateY(6px);
+    box-shadow: 0 0 var(--primary-color-dark);
+}
+
+.button--secondary {
+    background: var(--secondary-color);
+    box-shadow: 0 6px var(--secondary-color-dark);
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+    background: #ed5a66;
+    box-shadow: 0 5px var(--secondary-color-dark);
+}
+
+.button--secondary:active {
+    background: #cc545c;
+    box-shadow: 0 0 var(--secondary-color-dark);
+}
+
+.button > svg {
+    stroke-width: 4px;
+    vertical-align: middle;
+    margin-right: 10px;
+    height: var(--font-size-text);
+}

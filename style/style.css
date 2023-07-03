@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Shadows+Into+Light&display=swap');
+@import 'helpers.css';
+@import 'buttons.css';
+@import 'modal.css';
+
+
+:root {
+    --background-color: #2e3141;
+    --primary-color: #4f5b74;
+    --primary-color-dark: #3f4a5d;
+    --secondary-color: #ee626d;
+    --secondary-color-dark: #bf4e53;
+    --white: #fff;
+    --font-size-text: 1.2rem;
+    --font-size-text-xs: 1.1rem;
+    --font-size-h1: 5rem;
+    --font-family: 'Bungee';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--font-size-text);
+    font-family: var(--font-family);
+    appearance: var(--secondary-color);
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--background-color);
+    background: linear-gradient(
+        20deg,
+        rgba(38, 41, 56, 1) 46%,
+        rgba(46, 49, 65, 1) 46%,
+        rgba(46, 49, 65, 1) 100%
+    );
+    position: relative;
+}
+
+a {
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--background-color);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--white);
+    font-size: var(--font-size-h1);
+}
+
+.container {
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.arrow-wrapper {
+    position: absolute;
+    top: -110px;
+    right: -30px;
+    animation: fade-in;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    visibility: 0;
+    opacity: 0;
+}
+
+.arrow-wrapper > span {
+    position: absolute;
+    top: -10px;
+    right: -70px;
+    transform: rotate(12deg);
+    font-family: 'Shadows Into Light';
+    color: var(--white);
+    animation-name: grow;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        visibility: 1;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: rotate(20deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(20deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(20deg) scale(1);
+    }
+}
+
+
+.copyright {
+    margin-top: 30px;
+    color: #fff;
+    list-style: none;
+    display: flex;
+    font-size: 14px;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.copyright li {
+    margin: 0 5px;
+}
+
+.copyright li span {
+    font-size: 16px;
+}
+
+.copyright li a {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+    * {
+        font-size: var(--font-size-text-xs);
+    }
+    
+    .arrow-wrapper {
+        display: none;
+    }
+}
